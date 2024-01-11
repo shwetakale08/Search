@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<cstdlib>
+void linears(int a[100],int n,int x)
+{
+	int i,flag=0;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]==x)
+		{
+			flag=1;
+			break;
+		}
+
+	}
+	if(flag==1)
+	{
+		printf("\nNUmber is found position:%d",i);
+	}
+	else
+	printf("\nNUmber is not found");
+}
+int main()
+{
+	int a[100],i,n,x;
+	printf("Enter limit:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+    a[i]=rand()%100;
+    printf("\nrandom number:");
+
+   	for(i=0;i<n;i++)
+   	printf("%d\t",a[i]);
+	printf("enter number to search:");
+	scanf("%d",&x);
+	linears(a,n,x);
+}
